@@ -54,6 +54,8 @@ form {
 	justify-content: center;
 	flex-direction: row;
 	color: #fff;
+	opacity: 100%;
+	transition: opacity 0.01s ease-in-out;
 }
 
 #text-input {
@@ -113,6 +115,8 @@ label {
 	border: 1px solid rgb(151, 72, 255);
 	border-radius: 0.5em;
 	color: rgb(151, 72, 255);
+	padding: 2px 1px 0 1px;
+	box-sizing: border-box;
 }
 
 #progress {

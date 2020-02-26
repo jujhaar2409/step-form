@@ -25,6 +25,7 @@ function Click(event) {
 	event.preventDefault();
 
 	if (event.target == submitBtn) {
+		// transition();
 		field++;
 		prog = field + 1;
 		if (prog == fields.length && data[2] != textInput.value) {
@@ -58,9 +59,9 @@ function Click(event) {
 			textInput.value = data[prog];
 		}
 	} else if (event.target == backBtn) {
+		// transition();
 		field--;
 		prog = field + 1;
-
 		if (prog == 0) {
 			backBtn.style.opacity = "20%";
 			textInput.value = data[prog];
@@ -76,3 +77,10 @@ function Click(event) {
 		}
 	}
 }
+
+// function transition() {
+// 	form1.style.opacity = "0%";
+// 	setTimeout(() => {
+// 		form1.style.opacity = "100%";
+// 	}, 600);
+// }
