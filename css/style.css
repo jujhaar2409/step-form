@@ -55,7 +55,7 @@
 @media screen and (max-width: 600px) {
 	#container-1,
 	#container-2 {
-		left: 4%;
+		left: 10%;
 		width: 80%;
 	}
 }
