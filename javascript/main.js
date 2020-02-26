@@ -80,7 +80,6 @@ function Click(event) {
 
 	if (label.innerHTML == "Password" || label.innerHTML == "Confirm") {
 		textInput.type = "password";
-		console.log(textInput);
 	} else {
 		textInput.nodeType = "text";
 	}
