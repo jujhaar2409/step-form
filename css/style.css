@@ -8,8 +8,8 @@
 	background-color: #fff;
 	border-radius: 1em;
 	top: 5%;
-	left: 30%;
-	width: 40%;
+	left: 15%;
+	width: 70%;
 	margin: 0 auto;
 	border: none;
 	transition-delay: 1s;
@@ -23,8 +23,8 @@
 	background-color: #fff;
 	border-radius: 1em;
 	top: 5%;
-	left: 30%;
-	width: 40%;
+	left: 15%;
+	width: 70%;
 	margin: 0 auto;
 	border: none;
 	transition-delay: 1s;
@@ -129,6 +129,7 @@ label {
 	margin: 10px;
 	background-color: rgb(151, 72, 255);
 	width: 100%;
+	opacity: 0%;
 	margin: 10px 0;
 	padding: 2px 10px;
 	color: white;

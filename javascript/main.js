@@ -25,6 +25,7 @@ function Click(event) {
 	event.preventDefault();
 
 	if (event.target == submitBtn) {
+		progressBar.style.opacity = "100%";
 		// transition();
 		field++;
 		prog = field + 1;
