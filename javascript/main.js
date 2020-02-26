@@ -77,6 +77,13 @@ function Click(event) {
 			progressBar.style.width = (prog / fields.length) * 100 + "%";
 		}
 	}
+
+	if (label.innerHTML == "Password" || label.innerHTML == "Confirm") {
+		textInput.type = "password";
+		console.log(textInput);
+	} else {
+		textInput.nodeType = "text";
+	}
 }
 
 // function transition() {
