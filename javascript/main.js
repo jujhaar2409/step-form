@@ -1,4 +1,4 @@
-var fields = ["Username", "Email", "Password", "Confirm"];
+var fields = ["Username", "Phone no", "Password", "Confirm"];
 var data = ["", "", "", ""];
 
 var container1 = document.getElementById("container-1");

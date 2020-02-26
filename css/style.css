@@ -16,6 +16,7 @@
 	padding: 0 30px 30px 30px;
 	opacity: 0%;
 	transition: opacity ease-in-out 1s;
+	box-shadow: 10px 10px rgba(0, 0, 0, 0.4);
 }
 #container-2 {
 	position: absolute;
@@ -33,6 +34,7 @@
 	transition-delay: 1s;
 	color: rgb(151, 72, 255);
 	text-align: center;
+	box-shadow: 8px 8px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
@@ -41,6 +43,9 @@ h1 {
 	text-align: center;
 	font-size: 80px;
 	color: rgb(151, 72, 255);
+	/* border: 1px solid rgb(151, 72, 255); */
+	border-radius: 2em;
+	padding: 15px 0 15px 0;
 }
 
 body {
@@ -82,29 +87,30 @@ form {
 #submit-button {
 	flex: 1;
 	background-color: rgb(151, 72, 255);
-	border: 1px solid #fff;
+	border: 1px solid rgb(151, 72, 255);
 	border-radius: 0.5em;
 	padding: 0.4em 1em;
 	color: #fff;
 	text-align: center;
 	margin-left: 10px;
+	box-shadow: 4px 3px rgba(0, 0, 0, 0.48);
 }
 #back-button {
 	margin-right: 10px;
 	flex: 1;
 	background-color: rgb(151, 72, 255);
-	border: 1px solid #fff;
+	border: 1px solid rgb(151, 72, 255);
 	border-radius: 0.5em;
 	padding: 0.4em 1em;
 	color: #fff;
 	text-align: center;
 	opacity: 20%;
+	box-shadow: 4px 3px rgba(0, 0, 0, 0.48);
 }
 #submit-button:hover,
 #back-button:hover {
 	background-color: #fff;
 	color: rgb(151, 72, 255);
-	border-color: rgb(151, 72, 255);
 }
 
 label {
