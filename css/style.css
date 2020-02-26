@@ -1,6 +1,13 @@
 * {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	transition: all 0.5s ease-in-out;
+	box-sizing: border-box;
+}
+
+#upper-div,
+#lower-div {
+	display: flex;
+	justify-content: space-around;
 }
 
 #container-1 {
@@ -8,8 +15,8 @@
 	background-color: #fff;
 	border-radius: 1em;
 	top: 5%;
-	left: 15%;
-	width: 70%;
+	left: 30%;
+	width: 40%;
 	margin: 0 auto;
 	border: none;
 	transition-delay: 1s;
@@ -23,8 +30,8 @@
 	background-color: #fff;
 	border-radius: 1em;
 	top: 5%;
-	left: 15%;
-	width: 70%;
+	left: 30%;
+	width: 40%;
 	margin: 0 auto;
 	border: none;
 	transition-delay: 1s;
@@ -35,6 +42,22 @@
 	color: rgb(151, 72, 255);
 	text-align: center;
 	box-shadow: 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 1000px) {
+	#container-1,
+	#container-2 {
+		left: 15%;
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#container-1,
+	#container-2 {
+		left: 4%;
+		width: 80%;
+	}
 }
 
 h1 {
@@ -54,23 +77,26 @@ body {
 }
 
 form {
-	display: flex;
-	flex-wrap: wrap;
+	/* display: flex; */
+	/* flex-wrap: wrap; */
 	justify-content: center;
-	flex-direction: row;
+	/* flex-direction: row; */
 	color: #fff;
+	align-items: center;
 	opacity: 100%;
 	transition: opacity 0.01s ease-in-out;
 }
 
 #text-input {
-	flex: 6;
+	/* flex: 6; */
+	flex-basis: 70%;
 	background-color: white;
 	border: 1px solid rgb(151, 72, 255);
 	color: rgb(151, 72, 255);
 	border-radius: 0.5em;
 	padding: 0.4em 1em;
-	margin-left: 10px;
+	/* margin-left: 10px;*/
+	margin: 5px;
 }
 /* 
 #text-input:hover,
@@ -85,19 +111,17 @@ form {
 } */
 
 #submit-button {
-	flex: 1;
+	/* flex: 1; */
 	background-color: rgb(151, 72, 255);
 	border: 1px solid rgb(151, 72, 255);
 	border-radius: 0.5em;
 	padding: 0.4em 1em;
 	color: #fff;
 	text-align: center;
-	margin-left: 10px;
 	box-shadow: 4px 3px rgba(0, 0, 0, 0.48);
 }
 #back-button {
-	margin-right: 10px;
-	flex: 1;
+	/* flex: 1; */
 	background-color: rgb(151, 72, 255);
 	border: 1px solid rgb(151, 72, 255);
 	border-radius: 0.5em;
@@ -107,6 +131,13 @@ form {
 	opacity: 20%;
 	box-shadow: 4px 3px rgba(0, 0, 0, 0.48);
 }
+
+#submit-button,
+#back-button {
+	flex-basis: 45%;
+	margin: 5px;
+}
+
 #submit-button:hover,
 #back-button:hover {
 	background-color: #fff;
@@ -114,8 +145,8 @@ form {
 }
 
 label {
-	flex: 1;
-	flex-basis: 8%;
+	/* flex: 1; */
+	flex-basis: 20%;
 	text-align: center;
 	text-justify: inherit;
 	border: 1px solid rgb(151, 72, 255);
@@ -123,6 +154,8 @@ label {
 	color: rgb(151, 72, 255);
 	padding: 2px 1px 0 1px;
 	box-sizing: border-box;
+	display: block;
+	margin: 5px;
 }
 
 #progress {
