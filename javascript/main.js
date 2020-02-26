@@ -33,7 +33,10 @@ function click(event) {
 		// conatiner1.style.display = "none";
 		container2.style.opacity = "100%";
 		container2.innerHTML =
-			"<h3>Your form has been submitted " + data[0] + "</h3>";
+			"<h3>Your form has been submitted " +
+			data[0] +
+			"</h3>" +
+			"<p>Made by Jujhaar Singh</p>";
 	} else if (prog == fields.length && data[2] == textInput.value) {
 		label.innerHTML = "Done";
 		progressBar.style.width = "96%";
