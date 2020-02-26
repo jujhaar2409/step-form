@@ -50,6 +50,7 @@ body {
 
 form {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	flex-direction: row;
 	color: #fff;
