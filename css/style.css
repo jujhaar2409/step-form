@@ -1,7 +1,86 @@
+.light {
+	--main-color: rgb(151, 72, 255);
+	--secondary-color: rgb(255, 255, 255);
+	--shadow-color-btn: rgba(0, 0, 0, 0.48);
+	--shadow-color-card: rgba(0, 0, 0, 0.4);
+}
+.dark {
+	--main-color: rgb(0, 0, 0);
+	--secondary-color: rgb(151, 72, 255);
+	--shadow-color-btn: rgba(0, 0, 0, 0.4);
+	--shadow-color-card: rgba(151, 72, 255, 0.4);
+}
+
+/*slider*/
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--main-color);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: var(--secondary-color);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: var(--main-color);
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px var(--main-color);
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/*slider*/
+
 * {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	transition: all 0.5s ease-in-out;
 	box-sizing: border-box;
+	transition: color none;
+	transition: background none;
+	transition: border none;
 }
 
 #upper-div,
@@ -14,24 +93,9 @@
 	flex-direction: column;
 }
 
-#container-1 {
+.container {
 	position: absolute;
-	background-color: #fff;
-	border-radius: 1em;
-	top: 5%;
-	left: 30%;
-	width: 40%;
-	margin: 0 auto;
-	border: none;
-	transition-delay: 1s;
-	padding: 0 30px 30px 30px;
-	opacity: 0%;
-	transition: opacity ease-in-out 1s;
-	box-shadow: 10px 10px rgba(0, 0, 0, 0.4);
-}
-#container-2 {
-	position: absolute;
-	background-color: #fff;
+	background-color: var(--secondary-color);
 	border-radius: 1em;
 	top: 5%;
 	left: 30%;
@@ -42,44 +106,104 @@
 	padding: 0 30px;
 	opacity: 0%;
 	transition: opacity ease-in-out 1s;
+	box-shadow: 10px 10px var(--shadow-color-card);
+}
+
+/* p {
+	padding: 0 3px 2px 3px;
+} */
+
+#container-3 {
+	top: 80%;
+	left: 40%;
+	padding: 10px 10px;
+	/* height: 10%; */
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	color: var(--main-color);
+	transition-delay: 0;
+	transition: color none;
+	box-shadow: 9px 9px var(--shadow-color-card);
+}
+#container-3 p{
+	padding:0;
+	margin:0;
+	margin-top:5px;
+}
+
+.inner-div {
+	transition: none;
+}
+
+#container-3-1 {
+	/* order: 1; */
+	flex-basis: 10%;
+}
+#container-3-2 {
+	/* order: 2; */
+	flex-basis: 10%;
+}
+#container-3-3 {
+	/* order: 3; */
+	flex-basis: 10%;
+}
+#container-1 {
+	padding: 0 30px 30px 30px;
+	opacity: 0%;
+	transition: opacity ease-in-out 1s;
+	box-shadow: 10px 10px var(--shadow-color-card);
+	top: 5%;
+	left: 30%;
+}
+#container-2 {
+	padding: 0 30px;
+	opacity: 0%;
+	transition: opacity ease-in-out 1s;
 	transition-delay: 1s;
-	color: rgb(151, 72, 255);
+	color: var(--main-color);
 	text-align: center;
-	box-shadow: 8px 8px rgba(0, 0, 0, 0.4);
+	box-shadow: 8px 8px var(--shadow-color-card);
+	top: 5%;
+	left: 30%;
 }
 
 #text-input {
+	transition: initial;
 	/* flex: 6; */
 	flex-basis: 100%;
-	background-color: white;
-	border: 1px solid rgb(151, 72, 255);
-	color: rgb(151, 72, 255);
+	background-color: var(--secondary-color);
+	border: 1px solid var(--main-color);
+	color: var(--main-color);
 	border-radius: 0.5em;
 	padding: 0.4em 1em;
 	/* margin-left: 10px;*/
 	margin: 5px;
 	text-align: center;
 }
-label {
+#label {
 	/* flex: 1; */
 	flex-basis: 100%;
 	text-align: center;
 	text-justify: inherit;
-	border: 1px solid rgb(151, 72, 255);
+	border: 1px solid var(--main-color);
 	border-radius: 0.5em;
-	color: rgb(151, 72, 255);
+	color: var(--main-color);
 	padding: 0.3em 1em;
 	box-sizing: border-box;
 	display: block;
 	margin: 5px;
+	transition: color none;
+	transition: border none;
 }
 h1 {
 	font-family: sans-serif;
 	transition: none;
 	text-align: center;
 	font-size: 80px;
-	color: rgb(151, 72, 255);
-	/* border: 1px solid rgb(151, 72, 255); */
+	color: var(--main-color);
+	/* border: 1px solid var(--main-color); */
 	border-radius: 2em;
 	padding: 15px 0 15px 0;
 }
@@ -97,11 +221,15 @@ h1 {
 	h1 {
 		font-size: 40px;
 	}
+	#container-3{
+		width:50%;
+		left:25%;	
+	}
 }
 
 body {
-	background-color: rgb(151, 72, 255);
-	color: #fff;
+	background-color: var(--main-color);
+	color: var(--secondary-color);
 }
 
 form {
@@ -109,7 +237,7 @@ form {
 	/* flex-wrap: wrap; */
 	justify-content: center;
 	/* flex-direction: row; */
-	color: #fff;
+	color: var(--secondary-color);
 	align-items: center;
 	opacity: 100%;
 	transition: opacity 0.01s ease-in-out;
@@ -118,35 +246,35 @@ form {
 /* 
 #text-input:hover,
 #text-input:focus-within {
-	background-color: #fff;
-	color: rgb(151, 72, 255);
-	border-color: rgb(151, 72, 255);
+	background-color: var(--secondary-color);
+	color: var(--main-color);
+	border-color: var(--main-color);
 } */
 /* #text-input:focus-within {
 	color: black;
-	background-color: #fff;
+	background-color: var(--secondary-color);
 } */
 
 #submit-button {
 	/* flex: 1; */
-	background-color: rgb(151, 72, 255);
-	border: 1px solid rgb(151, 72, 255);
+	background-color: var(--main-color);
+	border: 1px solid var(--main-color);
 	border-radius: 0.5em;
 	padding: 0.4em 1em;
-	color: #fff;
+	color: var(--secondary-color);
 	text-align: center;
-	box-shadow: 4px 3px rgba(0, 0, 0, 0.48);
+	box-shadow: 4px 3px var(--shadow-color-btn);
 }
 #back-button {
 	/* flex: 1; */
-	background-color: rgb(151, 72, 255);
-	border: 1px solid rgb(151, 72, 255);
+	background-color: var(--main-color);
+	border: 1px solid var(--main-color);
 	border-radius: 0.5em;
 	padding: 0.4em 1em;
-	color: #fff;
+	color: var(--secondary-color);
 	text-align: center;
 	opacity: 20%;
-	box-shadow: 4px 3px rgba(0, 0, 0, 0.48);
+	box-shadow: 4px 3px var(--shadow-color-btn);
 }
 
 #submit-button,
@@ -157,17 +285,17 @@ form {
 
 #submit-button:hover,
 #back-button:hover {
-	background-color: #fff;
-	color: rgb(151, 72, 255);
+	background-color: var(--secondary-color);
+	color: var(--main-color);
 }
 
 #progress {
 	margin: 10px;
-	background-color: rgb(151, 72, 255);
+	background-color: var(--main-color);
 	width: 100%;
 	opacity: 0%;
 	margin: 10px 0;
 	padding: 2px 10px;
-	color: white;
+	color: var(--secondary-color);
 	border-radius: 0.5em;
 }

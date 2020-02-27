@@ -3,25 +3,30 @@ var data = ["", "", "", ""];
 
 var container1 = document.getElementById("container-1");
 var container2 = document.getElementById("container-2");
+var container3 = document.getElementById("container-3");
 var progressBar = document.getElementById("progress");
 var label = document.getElementById("label");
 var submitBtn = document.getElementById("submit-button");
 var backBtn = document.getElementById("back-button");
 var textInput = document.getElementById("text-input");
 var form1 = document.getElementById("form-1");
+var slider = document.getElementById("slider");
+var body = document.getElementById("body");
 
 var field = -1;
 var prog = field + 1;
 
 container1.style.opacity = "100%";
+container3.style.opacity = "100%";
 
 // progressBar.innerHTML = "Progress: " + (prog / fields.length) * 100 + "%";
 progressBar.style.width = "0%";
 label.innerHTML = fields[field + 1];
 
-form1.addEventListener("click", Click);
+form1.addEventListener("click", btnClick);
+slider.addEventListener("click", sliderClick);
 
-function Click(event) {
+function btnClick(event) {
 	event.preventDefault();
 
 	if (event.target == submitBtn) {
@@ -34,6 +39,7 @@ function Click(event) {
 			field--;
 		} else if (prog == fields.length + 1) {
 			container1.style.opacity = "0";
+			container3.style.opacity = "0";
 			// conatiner1.style.display = "none";
 			container2.style.opacity = "100%";
 			container2.innerHTML =
@@ -103,3 +109,11 @@ function Click(event) {
 // 		form1.style.opacity = "100%";
 // 	}, 600);
 // }
+
+function sliderClick(event) {
+	if (body.classList == "dark") {
+		body.classList = "light";
+	} else {
+		body.classList = "dark";
+	}
+}
