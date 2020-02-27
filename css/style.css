@@ -11,6 +11,7 @@
 }
 #upper-div {
 	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 #container-1 {
@@ -49,7 +50,7 @@
 
 #text-input {
 	/* flex: 6; */
-	flex-basis: 70%;
+	flex-basis: 100%;
 	background-color: white;
 	border: 1px solid rgb(151, 72, 255);
 	color: rgb(151, 72, 255);
@@ -57,16 +58,17 @@
 	padding: 0.4em 1em;
 	/* margin-left: 10px;*/
 	margin: 5px;
+	text-align: center;
 }
 label {
 	/* flex: 1; */
-	flex-basis: 20%;
+	flex-basis: 100%;
 	text-align: center;
 	text-justify: inherit;
 	border: 1px solid rgb(151, 72, 255);
 	border-radius: 0.5em;
 	color: rgb(151, 72, 255);
-	padding: 2px 3px 0 3px;
+	padding: 0.3em 1em;
 	box-sizing: border-box;
 	display: block;
 	margin: 5px;

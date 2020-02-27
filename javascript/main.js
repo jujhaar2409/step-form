@@ -1,4 +1,4 @@
-var fields = ["Username", "Phone no", "Password", "Confirm"];
+var fields = ["Username", "Phone no", "Password", "Confirm Password"];
 var data = ["", "", "", ""];
 
 var container1 = document.getElementById("container-1");
@@ -43,12 +43,12 @@ function Click(event) {
 				"<p>Made by Jujhaar Singh</p>";
 		} else if (prog == fields.length && data[2] == textInput.value) {
 			data[field] = textInput.value;
-			label.innerHTML = "Done";
+			label.innerHTML = "Done!";
 			progressBar.style.width = "96%";
 			// progressBar.innerHTML =
 			// 	"Progress: " + (prog / fields.length) * 100 + "%";
-			textInput.style.display = "none";
-			submitBtn.style.flex = "10";
+			// textInput.style.display = "none";
+			// submitBtn.style.flex = "10";
 			submitBtn.value = "Finish!";
 		} else {
 			label.innerHTML = fields[field + 1];
@@ -59,7 +59,7 @@ function Click(event) {
 			data[field] = textInput.value;
 			textInput.value = data[prog];
 		}
-	} else if (event.target == backBtn) {
+	} else if (event.target == backBtn && label.innerHTML != fields[0]) {
 		// transition();
 		field--;
 		prog = field + 1;
@@ -71,17 +71,27 @@ function Click(event) {
 		} else {
 			textInput.style.display = "flex";
 			submitBtn.value = "Next";
-			submitBtn.style.flex = "1";
+			// submitBtn.style.flex = "1";
 			textInput.value = data[prog];
 			label.innerHTML = fields[prog];
 			progressBar.style.width = (prog / fields.length) * 100 + "%";
 		}
 	}
 
-	if (label.innerHTML == "Password" || label.innerHTML == "Confirm") {
+	if (
+		label.innerHTML == "Password" ||
+		label.innerHTML == "Confirm Password"
+	) {
+		textInput.style.opacity = "100%";
 		textInput.type = "password";
+	} else if (label.innerHTML == fields[0]) {
+		progressBar.style.opacity = "0%";
+		textInput.style.opacity = "100%";
+	} else if (label.innerHTML == "Done!") {
+		textInput.style.opacity = "0%";
 	} else {
 		textInput.nodeType = "text";
+		textInput.style.opacity = "100%";
 	}
 }
 
