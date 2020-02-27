@@ -87,10 +87,12 @@ function Click(event) {
 	} else if (label.innerHTML == fields[0]) {
 		progressBar.style.opacity = "0%";
 		textInput.style.opacity = "100%";
+		textInput.type = "text";
 	} else if (label.innerHTML == "Done!") {
 		textInput.style.opacity = "0%";
+		textInput.type = "text";
 	} else {
-		textInput.nodeType = "text";
+		textInput.type = "text";
 		textInput.style.opacity = "100%";
 	}
 }
