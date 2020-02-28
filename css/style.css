@@ -94,7 +94,7 @@ input:checked + .slider:before {
 }
 
 .container {
-	position: absolute;
+	/* position: absolute; */
 	background-color: var(--secondary-color);
 	border-radius: 1em;
 	top: 5%;
@@ -126,11 +126,13 @@ input:checked + .slider:before {
 	transition-delay: 0;
 	transition: color none;
 	box-shadow: 9px 9px var(--shadow-color-card);
+	flex: 1;
+	margin-top: 1em;
 }
-#container-3 p{
-	padding:0;
-	margin:0;
-	margin-top:5px;
+#container-3 p {
+	padding: 0;
+	margin: 0;
+	margin-top: 5px;
 }
 
 .inner-div {
@@ -156,6 +158,7 @@ input:checked + .slider:before {
 	box-shadow: 10px 10px var(--shadow-color-card);
 	top: 5%;
 	left: 30%;
+	flex: 5;
 }
 #container-2 {
 	padding: 0 30px;
@@ -167,6 +170,8 @@ input:checked + .slider:before {
 	box-shadow: 8px 8px var(--shadow-color-card);
 	top: 5%;
 	left: 30%;
+	position: absolute;
+	display: block;
 }
 
 #text-input {
@@ -221,15 +226,20 @@ h1 {
 	h1 {
 		font-size: 40px;
 	}
-	#container-3{
-		width:50%;
-		left:25%;	
+	#container-3 {
+		width: 50%;
+		left: 25%;
 	}
 }
 
 body {
 	background-color: var(--main-color);
 	color: var(--secondary-color);
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	flex-wrap: wrap;
+	flex-flow: column;
 }
 
 form {
