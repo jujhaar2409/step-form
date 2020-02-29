@@ -6,9 +6,9 @@
 }
 .dark {
 	--main-color: rgb(0, 0, 0);
-	--secondary-color: rgb(151, 72, 255);
+	--secondary-color: rgb(185, 131, 255);
 	--shadow-color-btn: rgba(0, 0, 0, 0.4);
-	--shadow-color-card: rgba(151, 72, 255, 0.4);
+	--shadow-color-card: rgba(185, 131, 255, 0.4);
 }
 
 /*slider*/
