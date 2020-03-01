@@ -265,9 +265,9 @@ form {
 	background-color: var(--secondary-color);
 } */
 
-#submit-button {
-	/* flex: 1; */
-}
+/* #submit-button {
+	flex: 1; 
+}*/
 #back-button {
 	/* flex: 1; */
 	opacity: 20%;
