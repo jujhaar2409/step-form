@@ -6,7 +6,7 @@
 }
 .dark {
 	--main-color: #071e3d;
-	--secondary-color: rgb(69, 147, 175);
+	--secondary-color: #4593af;
 	--shadow-color-btn: rgb(0, 0, 0, 0.5);
 	--shadow-color-card: rgba(0, 0, 0, 1);
 }
