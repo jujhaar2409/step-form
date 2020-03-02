@@ -176,6 +176,12 @@ input:checked + .slider:before {
 	display: block;
 }
 
+#container-1,
+#container-2 {
+	left: 32%;
+	width: 36%;
+}
+
 #text-input {
 	transition: initial;
 	/* flex: 6; */
@@ -238,7 +244,7 @@ body {
 	background-color: var(--main-color);
 	color: var(--secondary-color);
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	flex-direction: column;
 	flex-wrap: wrap;
 	flex-flow: column;
@@ -268,7 +274,7 @@ form {
 } */
 
 #submit-button {
-	flex: 1;
+	/* flex: 1; */
 	margin-left: 5px;
 }
 #back-button {
