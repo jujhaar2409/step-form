@@ -106,7 +106,7 @@ input:checked + .slider:before {
 	padding: 0 30px;
 	opacity: 0%;
 	transition: opacity ease-in-out 1s;
-	box-shadow: 10px 10px var(--shadow-color-card);
+	box-shadow: 10px 10px 5px var(--shadow-color-card);
 }
 
 /* p {
@@ -125,7 +125,7 @@ input:checked + .slider:before {
 	color: var(--main-color);
 	transition-delay: 0;
 	transition: color none;
-	box-shadow: 9px 9px var(--shadow-color-card);
+	box-shadow: 9px 9px 5px var(--shadow-color-card);
 	flex: 1;
 	margin-top: 1em;
 }
@@ -155,7 +155,7 @@ input:checked + .slider:before {
 	padding: 0 30px 30px 30px;
 	opacity: 0%;
 	transition: opacity ease-in-out 1s;
-	box-shadow: 10px 10px var(--shadow-color-card);
+	box-shadow: 10px 10px 5px var(--shadow-color-card);
 	top: 5%;
 	left: 30%;
 	flex: 5;
@@ -167,7 +167,7 @@ input:checked + .slider:before {
 	transition-delay: 1s;
 	color: var(--main-color);
 	text-align: center;
-	box-shadow: 8px 8px var(--shadow-color-card);
+	box-shadow: 8px 8px 4px var(--shadow-color-card);
 	top: 5%;
 	left: 30%;
 	position: absolute;
@@ -283,7 +283,7 @@ form {
 	text-align: center;
 	flex-basis: 45%;
 	margin: 5px;
-	box-shadow: 4px 3px var(--shadow-color-btn);
+	box-shadow: 4px 3px 2px var(--shadow-color-btn);
 }
 
 #submit-button:hover,
